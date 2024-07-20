@@ -31,9 +31,6 @@ func ArrangeArrayInOrder(t []int) []int {
 	return t
 }
 func CheckForFactor(base int, factor int) bool {
-	//factor := multiplicationof two numbers gives a factor
-	if base%factor == 0 {
-		return true
-	}
-	return false
+
+	return base%factor == 0
 }
