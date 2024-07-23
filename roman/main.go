@@ -88,11 +88,11 @@ func main() {
 		},
 	}
 	for _, value := range Calculation {
-		for n >= value.Numericals {
+		for n >= value.Numericals { // loop continues as long  n is creater that the
 			if calculate == "" {
-				calculate += value.Calculation
+				calculate += value.Calculation // checks if the string is still empty
 			} else {
-				calculate = calculate + "+" + value.Calculation
+				calculate += "+" + value.Calculation
 			}
 			sign += value.Signs
 			n -= value.Numericals
