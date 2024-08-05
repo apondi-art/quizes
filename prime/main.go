@@ -6,6 +6,21 @@ import (
 	"strconv"
 )
 
+// $ go run . 225225
+// 3*3*5*5*7*11*13
+// $ go run . 8333325
+// 3*3*5*5*7*11*13*37
+// $ go run . 9539
+// 9539
+// $ go run . 804577
+// 804577
+// $ go run . 42
+// 2*3*7
+// $ go run . a
+// $ go run . 0
+// $ go run . 1
+// $
+
 func main() {
 	if len(os.Args) != 2 {
 		return
@@ -21,12 +36,7 @@ func main() {
 	value := 2
 	for n > 1 {
 		if n%value == 0 {
-			if result == "" {
-				result += strconv.Itoa(value)
-			} else {
-				result += "*" + strconv.Itoa(value)
-			}
-
+			result += strconv.Itoa(value)
 			n = n / value
 
 		} else {
